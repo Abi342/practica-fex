@@ -1,0 +1,120 @@
+/* VARIABLES Y ESTILOS BASE */
+:root {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #38bdf8;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+    --radius: 12px;
+}
+
+/* CORREGIDO: Se cambió "-" por "*" */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: 15px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand { font-size: 1.25rem; font-weight: 700; }
+
+.badge {
+    background-color: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* HERO */
+.hero { padding: 40px 0 30px; text-align: center; }
+.tag { color: var(--accent); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
+.hero h1 { font-size: 2rem; margin-bottom: 10px; }
+.intro { color: var(--text-muted); }
+
+/* TARJETAS Y GRID */
+section { margin-bottom: 40px; }
+h2 { font-size: 1.4rem; margin-bottom: 15px; border-left: 4px solid var(--accent); padding-left: 10px; }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 18px;
+    border-radius: var(--radius);
+    flex: 0 1 calc(25% - 12px);
+    min-width: 180px;
+}
+
+.card h3 { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 6px; }
+.card p { font-size: 1rem; font-weight: 600; }
+
+/* GALERÍA DE FOTOS Y VIDEOS (CORREGIDO) */
+.media-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 15px; 
+}
+
+/* CORREGIDO: Se cambió .media-item por .media-box para que coincida con tu HTML */
+.media-box {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.media-box img, 
+.media-box video { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+
+/* FOOTER */
+footer { 
+    text-align: center; 
+    padding: 20px 0; 
+    border-top: 1px solid var(--border); 
+    color: var(--text-muted); 
+    font-size: 0.8rem; 
+}

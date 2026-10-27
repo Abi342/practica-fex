@@ -1,0 +1,283 @@
+/* --- RESET Y VARIABLES --- */
+:root {
+    --bg-page: #fdfbf7;
+    --bg-peach: #ffe8d6;
+    --text-dark: #6b4329;
+    --text-muted: #9c7353;
+    --orange: #f4a261;
+    --lavender: #d8bbff;
+    --border: #f0e3d5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-page);
+    color: var(--text-dark);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.page-container {
+    width: 100%;
+    max-width: 1050px;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 12px 35px rgba(107, 67, 41, 0.08);
+    overflow: hidden;
+}
+
+/* --- MENÚ Y CABECERA (HERO) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--bg-page);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: flex;
+    gap: 20px;
+}
+
+.hero-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 30px;
+    padding: 50px 40px;
+    align-items: center;
+    background-color: var(--bg-page);
+    overflow: hidden;
+}
+
+.sub-heading {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.hero-section h1 {
+    font-size: 2.1rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.hero-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: var(--orange);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+}
+
+.hero-image {
+    border-radius: 18px;
+    overflow: hidden;
+    height: 260px;
+    z-index: 2;
+}
+
+.hero-image img,
+.polaroid-card img,
+.video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Blobs decorativos de fondo */
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+.shape-lavender {
+    width: 130px;
+    height: 130px;
+    background-color: var(--lavender);
+    top: -20px;
+    left: -20px;
+}
+
+.shape-orange {
+    width: 90px;
+    height: 90px;
+    background-color: var(--orange);
+    top: 20px;
+    right: 20px;
+}
+
+.shape-yellow {
+    width: 70px;
+    height: 50px;
+    background-color: #ffea00;
+    bottom: 20px;
+    left: 45%;
+}
+
+/* --- POLAROID Y GRILLA DE DATOS --- */
+.details-section {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 35px;
+    padding: 50px 40px;
+    align-items: center;
+}
+
+.polaroid-wrapper {
+    position: relative;
+}
+
+.tape-decor {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    width: 80px;
+    height: 24px;
+    background-color: rgba(216, 187, 255, 0.85);
+    transform: rotate(-12deg);
+    z-index: 3;
+}
+
+.polaroid-card {
+    background-color: #ffffff;
+    padding: 14px 14px 20px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transform: rotate(-2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.polaroid-card img {
+    height: 210px;
+    margin-bottom: 10px;
+}
+
+.polaroid-caption {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.details-content h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.data-card {
+    background-color: var(--bg-page);
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+
+.card-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.card-val {
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.highlight-card {
+    background-color: #fefce8;
+    border-color: #fef08a;
+}
+
+/* --- SECCIÓN VIDEO --- */
+.video-section {
+    background-color: var(--bg-peach);
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.video-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+
+.stamp-badge {
+    display: inline-block;
+    border: 2px solid var(--orange);
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 6px 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+}
+
+.video-container {
+    border-radius: 16px;
+    overflow: hidden;
+    height: 220px;
+    background-color: #000;
+}
+
+/* --- ADAPTACIÓN RESPONSIVA PARA MÓVILES --- */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .hero-section, 
+    .details-section, 
+    .video-section {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+}

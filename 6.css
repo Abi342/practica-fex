@@ -1,0 +1,158 @@
+/* ==========================================
+   1. VARIABLES Y ESTILOS BASE
+   ========================================== */
+:root {
+  --primary-dark: #683817;  /* Marrón oscuro del título */
+  --bg-card: #f5eeea;       /* Beige/crema de los recuadros */
+  --border-card: #e5d7ce;   /* Borde suave de recuadros */
+  --text-main: #2d231d;
+  --text-muted: #8c6e5d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #faf7f5;
+  color: var(--text-main);
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ==========================================
+   2. CONTENEDOR PRINCIPAL
+   ========================================== */
+.card-container {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================
+   3. ENCABEZADO
+   ========================================== */
+.card-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  background: #f0e3db;
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+}
+
+.card-header h1 {
+  font-size: 2.2rem;
+  color: var(--primary-dark);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.meta-info {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.meta-info b {
+  color: var(--text-main);
+}
+
+/* ==========================================
+   4. GRILLA DE DATOS (ALINEACIÓN PERFECTA 3 Y 3)
+   ========================================== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Fuerza exactamente 3 columnas por fila */
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: 14px;
+  padding: 1.2rem 1rem;
+  width: 100%; /* Asegura que no se deformen */
+}
+
+/* Anula estilos anteriores que desalineaban las tarjetas */
+.center-item {
+  grid-column: auto !important;
+}
+
+.info-card .label,
+.info-card .label-text {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.5px;
+}
+
+.info-card .value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.info-card .price {
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+/* ==========================================
+   5. GALERÍA MULTIMEDIA
+   ========================================== */
+.gallery-section h3 {
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.media-item {
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================
+   6. RESPONSIVO (MÓVILES)
+   ========================================== */
+@media (max-width: 700px) {
+  .info-grid,
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}

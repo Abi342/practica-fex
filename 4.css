@@ -1,0 +1,178 @@
+/* Reset básico y tipografía urbana */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #0b0f19;
+    color: #e2e8f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 16px;
+}
+
+/* Tarjeta contenedora principal */
+.card-wrapper {
+    background-color: #111827;
+    max-width: 950px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 36px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(14, 165, 233, 0.1);
+    border: 1px solid #1f2937;
+    border-top: 4px solid #0ea5e9;
+}
+
+/* Banner de etiquetas */
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge-tag {
+    background-color: rgba(14, 165, 233, 0.15);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.badge-status {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Encabezado */
+.hero-header {
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+}
+
+.hero-header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 6px;
+}
+
+.meta-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.meta-info strong {
+    color: #cbd5e1;
+}
+
+.divider {
+    color: #0ea5e9;
+    font-weight: bold;
+}
+
+/* Grilla de datos */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.info-box {
+    background-color: #172033;
+    padding: 16px 20px;
+    border-radius: 10px;
+    border-left: 3px solid #0ea5e9;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-2px);
+    border-left-color: #38bdf8;
+}
+
+.info-box.full-width {
+    grid-column: 1 / -1;
+    border-left-color: #f59e0b;
+}
+
+.info-box .label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #38bdf8;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.info-box.full-width .label {
+    color: #fbbf24;
+}
+
+.info-box p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* Galería multimedia */
+.gallery-sec {
+    margin-bottom: 28px;
+}
+
+.gallery-sec h3 {
+    font-size: 0.85rem;
+    letter-spacing: 1.2px;
+    color: #94a3b8;
+    margin-bottom: 14px;
+}
+
+.media-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.media-card {
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #1f2937;
+    border: 1px solid #374151;
+}
+
+.media-card img,
+.media-card videao {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Footer */
+.card-footer {
+    border-top: 1px solid #1f2937;
+    padding-top: 16px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #64748b;
+}
